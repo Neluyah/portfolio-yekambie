@@ -13,6 +13,15 @@
   margin-top: 0.5rem;
 }
 
+/* ===== PAGE SUBTITLE ===== */
+.page-subtitle {
+  font-size: 1.05rem;
+  color: var(--muted);
+  margin-top: 1rem;
+  max-width: 580px;
+  line-height: 1.75;
+}
+
 /* ===== PROFIL INTRO ===== */
 .profil-intro {
   display: grid;
@@ -110,19 +119,28 @@
 }
 
 
-/* ===== SKILLS ===== */
+/* ===== SKILLS SECTION ===== */
 .profil-section {
-  margin-bottom: 5rem;
+  margin-bottom: 5.5rem;
 }
 
 .section-header {
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 
 .section-header h2 {
   margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
+.section-desc {
+  font-size: 0.95rem;
+  color: var(--muted);
+  font-weight: 300;
+  margin-top: 0.5rem;
+}
+
+/* ===== COMPÉTENCES TECHNIQUES ===== */
 .skills-groups {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -185,11 +203,74 @@
   flex-shrink: 0;
 }
 
-/* ===== LANGUES & SOFT ===== */
+/* ===== COMPÉTENCES COMPORTEMENTALES & TRANSVERSALES ===== */
+.soft-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.soft-card {
+  background: white;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.soft-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.soft-card--green {
+  border-left: 3px solid #10b981;
+}
+
+.soft-card--green:hover {
+  border-left-color: #059669;
+}
+
+.soft-card--purple {
+  border-left: 3px solid #8b5cf6;
+}
+
+.soft-card--purple:hover {
+  border-left-color: #7c3aed;
+}
+
+.soft-card__icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.soft-card__label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--ink);
+  margin-bottom: 0.3rem;
+}
+
+.soft-card__desc {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+/* ===== LANGUES & INTÉRÊTS ===== */
 .profil-bottom {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
+  margin-bottom: 2rem;
 }
 
 .profil-bottom h3 {
@@ -234,6 +315,35 @@
   transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+/* ===== CENTRES D'INTÉRÊT ===== */
+.interests-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.interest-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--paper-warm);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.9rem;
+  font-size: 0.85rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--ink);
+  transition: all 0.2s ease;
+}
+
+.interest-item:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+/* ===== SOFT SKILLS (legacy, gardé pour compatibilité) ===== */
 .soft-skills {
   display: flex;
   flex-wrap: wrap;
@@ -258,10 +368,16 @@
   border-color: var(--accent);
 }
 
-/* RESPONSIVE */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .profil-intro { grid-template-columns: 1fr; gap: 2rem; }
   .profil-intro__photo { max-width: 220px; margin: 0 auto; }
   .skills-groups { grid-template-columns: 1fr; }
+  .soft-grid { grid-template-columns: 1fr 1fr; }
   .profil-bottom { grid-template-columns: 1fr; gap: 3rem; }
+}
+
+@media (max-width: 640px) {
+  .soft-grid { grid-template-columns: 1fr; }
+  .interests-grid { grid-template-columns: 1fr; }
 }

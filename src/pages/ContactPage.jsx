@@ -41,7 +41,7 @@ export default function ContactPage() {
           <div className="contact-info reveal">
             <h2>Coordonnées</h2>
             <p style={{ marginTop: '0.75rem', marginBottom: '2.5rem' }}>
-              Disponible pour un stage de 3 mois dès <strong style={{ color: 'var(--ink)' }}>juin 2025</strong>.
+              Disponible pour un stage de 3 mois dès <strong style={{ color: 'var(--ink)' }}>juin 2026</strong>.
             </p>
 
             <div className="contact-cards">
@@ -65,7 +65,7 @@ export default function ContactPage() {
             {/* Disponibilité */}
             <div className="availability-badge">
               <span className="availability-dot" />
-              <span>Disponible pour un stage dès Juin 2025</span>
+              <span>Disponible pour un stage dès Juin 2026</span>
             </div>
           </div>
 

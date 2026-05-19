@@ -41,7 +41,7 @@ export default function Footer() {
           <span className="footer__nav-link">Angers — Mobile France</span>
           <div className="footer__available">
             <span className="footer__dot" />
-            Stage dès juin 2025
+            Stage dès juin 2026
           </div>
         </div>
       </div>

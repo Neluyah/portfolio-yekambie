@@ -85,19 +85,15 @@ const allProjects = [
     featured: false,
   },
   {
-    id: 8,                          // ← numéro unique (incrementez +1)
-    title: 'TP 2 — Active Directory',   // ← titre affiché
-    category: 'Systèmes & Réseaux', // ← choisissez parmi :
-                                    //   'Cybersécurité'
-                                    //   'Cloud & DevOps'
-                                    //   'Systèmes & Réseaux'
-                                    //   'Systèmes d\'Information'
-    emoji: '🖥️',                   // ← emoji représentatif
-    desc: 'Configuration d\'un Active Directory sous Windows Server 2022...',
-    tags: ['Windows Server', 'AD', 'GPO', 'ESAIP'],
-    pdf: '/rapports/mon-nouveau-rapport.pdf',  // ← nom exact du fichier
-    github: null,                   // ← lien GitHub ou null
-    featured: false,                // ← true = mis en avant en haut
+    id: 8,
+    title: 'TP 2 — Active Directory & GPO',
+    category: 'Systèmes & Réseaux',
+    emoji: '🖥️',
+    desc: 'Configuration complète d\'un Active Directory sous Windows Server 2022 : création de domaine, gestion des utilisateurs, Groupes de Sécurité et déploiement de GPO.',
+    tags: ['Windows Server', 'Active Directory', 'GPO', 'ESAIP'],
+    pdf: null,
+    github: null,
+    featured: false,
   },
 
 
@@ -216,10 +212,7 @@ export default function ProjetsPage() {
           ))}
         </div>
 
-        <div className="add-hint reveal">
-          <FiFileText />
-          <span>Pour ajouter un rapport : déposez votre PDF dans <code>public/rapports/</code></span>
-        </div>
+
       </div>
 
       {/* ===== VISIONNEUSE PDF react-pdf ===== */}
