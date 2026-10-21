@@ -1,16 +1,36 @@
-# React + Vite
+# Portfolio — Yohann Ekambie Souamy (PFE 2027)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Nouvelle version validée avec radar SOC interactif, carte de compétences, défis pédagogiques, six études de cas et parcours professionnel.
 
-Currently, two official plugins are available:
+## Déploiement Vercel
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Le projet est compatible avec Vercel en mode déploiement de fichiers statiques. La commande `npm run build` copie l’accueil et les fichiers publics dans `dist/`. Les rapports originaux sont dans `public/rapports`.
 
-## React Compiler
+Sur votre machine, remplacez les fichiers de votre dépôt local GitHub `Neluyah/portfolio-yekambie` par ceux de cette archive, puis exécutez :
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```powershell
+git status
+npm run build
+git add -A
+git commit -m "Portfolio PFE 2027 - refonte interactive V04"
+git push origin main
+```
 
-## Expanding the ESLint configuration
+Si le dépôt n’est pas encore cloné :
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```powershell
+git clone https://github.com/Neluyah/portfolio-yekambie.git
+cd portfolio-yekambie
+```
+
+Puis copiez les fichiers de cette archive dans le répertoire `portfolio-yekambie` avant les commandes ci-dessus. Ne copiez pas l’archive elle-même, mais son contenu.
+
+Après l’envoi, consulter l’onglet Deployments de Vercel pour confirmer le déploiement et vérifier que le domaine yekambie.com est bien associé au projet.
+
+## Notes
+
+- Les études de cas mentionnent les limites et distinguent les travaux en cours des stages.
+- Le radar, la carte et le jeu SOC utilisent des événements fictifs.
+- L’ancien CV Bac+4 n’est pas inclus dans cette version publiée.
+- Le code React initial reste dans `src/` pour archivage, mais l’accueil actuel est autonome en HTML/CSS/JS.
+- Le site actuel n’a pas été modifié directement par ces fichiers : il faut envoyer le commit à GitHub.
